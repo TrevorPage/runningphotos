@@ -66,7 +66,23 @@ function handleError(res, statusCode) {
 // Gets a list of Participants
 export function index(req, res) {
   return Participant.find().exec()
-    .then(respondWithResult(res))
+    .then(function(all){
+        var filtered = all;
+
+        // Filter returned names based on a ?suggestionsFor= query.
+        // This implementation is probably poor and is for proof of concept purposes.
+        // Better way may be by MongoDB $regex operator
+        // http://stackoverflow.com/questions/26814456/how-to-get-all-the-values-that-contains-part-of-a-string-using-mongoose-find
+        if (req.query && req.query.suggestionsFor) {
+            var queryName = req.query.suggestionsFor.toLowerCase();
+            filtered = all.filter(function(participant) {
+                console.log(participant.firstName);
+                return participant.firstName.toLowerCase().indexOf(queryName) !== -1;
+            });        
+        }
+
+        respondWithResult(res)(filtered);
+    })
     .catch(handleError(res));
 }
 

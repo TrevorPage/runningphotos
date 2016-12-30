@@ -6,6 +6,9 @@
 'use strict';
 import Thing from '../api/thing/thing.model';
 import User from '../api/user/user.model';
+import Participant from '../api/participant/participant.model';
+
+var Faker = require('faker');
 
 Thing.find({}).remove()
   .then(() => {
@@ -57,3 +60,24 @@ User.find({}).remove()
       console.log('finished populating users');
     });
   });
+
+
+Participant.find({}).remove()
+    .then(() => {
+
+        var fakeParticipants = [];
+        for (var i = 0; i < 1000; i++) {
+            fakeParticipants.push({
+                firstName: Faker.name.firstName(),
+                lastName: Faker.name.lastName()
+            });
+        }
+
+
+        Participant.create(fakeParticipants)
+        .then(() => {
+          console.log('finished populating fake participants');
+        });
+    });
+
+
