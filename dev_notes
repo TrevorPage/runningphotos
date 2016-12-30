@@ -1,0 +1,58 @@
+
+runningphotos development log
+-----------------------------
+
+Used following options in yeoman fullstack generator:
+
+
+Write scripts with: Babel
+Use Flow types with Babel: no
+Write markup with: HTML (as opposed to Pug)
+Sass (rather than CSS, Stylus, Less)
+uiRouter (not ngRoute)
+Included Bootstrap and UI Bootstrap
+Mongoose (MongoDB)
+Auth template - yes
+Using Google, Facebook, Twitter
+socket.io - yes
+Tests using Mocha + Chai + Sinon
+Chai assertions with Expect
+
+----------------------------
+
+To get mongod working:
+
+http://stackoverflow.com/questions/24599119/mongodb-not-working-error-dbpath-data-db-does-not-exist
+
+sudo mkdir -p /data/db/
+
+sudo chown `id -u` /data/db
+
+
+----------------------------
+
+npm start
+
+
+actually, use...
+
+gulp serve
+
+(using npm start resulted in no glyphicons)
+
+
+---------------------------
+
+Absolutely no idea how, but when initially installing the generator using
+npm install -g yo gulp-cli generator-angular-fullstack
+I ended up with the alpha version which uses Angular 2.
+(confirmed version using npm list generator-angular-fullstack -g which
+showed @5.0.0-alpha.3)
+Did npm install -g generator-angular-fullstack again and now have
+@4.1.1 which is latest stable.
+
+So rebuilt all again using previous options (Babel, etc.)
+
+
+
+
