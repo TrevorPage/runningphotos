@@ -12,6 +12,8 @@ import uiBootstrap from 'angular-ui-bootstrap';
 // import ngMessages from 'angular-messages';
 // import ngValidationMatch from 'angular-validation-match';
 
+import ngAnimate from 'angular-animate';
+import ngMaterial from 'angular-material';
 
 import {
   routeConfig
@@ -30,7 +32,7 @@ import socket from '../components/socket/socket.service';
 import './app.scss';
 
 angular.module('runningphotosApp', [ngCookies, ngResource, ngSanitize, 'btford.socket-io', uiRouter,
-  uiBootstrap, _Auth, account, admin, navbar, footer, main, constants, socket, util
+  uiBootstrap, _Auth, account, admin, navbar, footer, main, constants, socket, util, ngAnimate, ngMaterial	
 ])
   .config(routeConfig)
   .run(function($rootScope, $location, Auth) {

@@ -76,8 +76,7 @@ export function index(req, res) {
         if (req.query && req.query.suggestionsFor) {
             var queryName = req.query.suggestionsFor.toLowerCase();
             filtered = all.filter(function(participant) {
-                console.log(participant.firstName);
-                return participant.firstName.toLowerCase().indexOf(queryName) !== -1;
+                return (participant.firstName.toLowerCase().indexOf(queryName) !== -1 || participant.lastName.toLowerCase().indexOf(queryName) !== -1);
             });        
         }
 

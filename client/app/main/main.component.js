@@ -36,6 +36,16 @@ export class MainController {
   deleteThing(thing) {
     this.$http.delete(`/api/things/${thing._id}`);
   }
+
+
+
+  querySearch(query){
+    return this.$http.get("/api/participants", {params: {suggestionsFor: query}})
+    .then(function(response){
+      return response.data;
+    })
+  }
+
 }
 
 export default angular.module('runningphotosApp.main', [uiRouter])

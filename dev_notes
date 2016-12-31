@@ -53,6 +53,20 @@ Did npm install -g generator-angular-fullstack again and now have
 
 So rebuilt all again using previous options (Babel, etc.)
 
+---------------------------
+
+For fake names etc:
+npm install faker
+
+https://www.npmjs.com/package/Faker
+
+
+---------------------------
+
+http://stackoverflow.com/questions/14790910/stop-all-instances-of-node-js-server
+
+---------------------------
+
 
 
 

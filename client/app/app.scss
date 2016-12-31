@@ -4,7 +4,12 @@ $icon-font-path: '/assets/fonts/bootstrap/';
 $fa-font-path: '/assets/fonts/font-awesome/';
 @import '~font-awesome/scss/font-awesome';
 
+// Added by Trevor Page to import angular-material .scss:
+@import '~angular-material/angular-material.scss';
+
 // @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,900|Roboto:300,500,700,900);
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic);
+
 
 /**
  * App-wide Styles
@@ -21,6 +26,7 @@ $fa-font-path: '/assets/fonts/font-awesome/';
 /* inject:scss */
 @import 'admin/admin';
 @import 'main/main';
+@import 'nameSearch/nameSearch';
 @import '../components/footer/footer';
 @import '../components/modal/modal';
 @import '../components/oauth-buttons/oauth-buttons';
