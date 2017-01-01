@@ -23,7 +23,7 @@ module.exports = {
 
   // TP: Seed DB even in production for initial proof of concept. There may be a better way.
   // Seed database on startup
-  seedDB: true
+  ,seedDB: true
 
   }
 };
