@@ -46,6 +46,7 @@ module.exports = function makeWebpackConfig(options) {
                 'angular-aria',
                 'angular-cookies',
                 'angular-resource',
+                'angular-material', /* Added by TP */
 
                 'angular-sanitize',
                 'angular-socket-io',

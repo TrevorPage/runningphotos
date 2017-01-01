@@ -69,7 +69,8 @@ Participant.find({}).remove()
         for (var i = 0; i < 1000; i++) {
             fakeParticipants.push({
                 firstName: Faker.name.firstName(),
-                lastName: Faker.name.lastName()
+                lastName: Faker.name.lastName(),
+                countryCode: Faker.address.countryCode()
             });
         }
 

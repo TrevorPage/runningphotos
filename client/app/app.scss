@@ -8,8 +8,11 @@ $fa-font-path: '/assets/fonts/font-awesome/';
 @import '~angular-material/angular-material.scss';
 
 // @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,900|Roboto:300,500,700,900);
+// TP:
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic);
 
+// Added by TP to make use of the flag-icon-css library installed using npm. Unsure if this is the correct way to add the dependency.
+@import '~flag-icon-css/css/flag-icon.css';
 
 /**
  * App-wide Styles

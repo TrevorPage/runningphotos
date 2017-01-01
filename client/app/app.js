@@ -32,7 +32,7 @@ import socket from '../components/socket/socket.service';
 import './app.scss';
 
 angular.module('runningphotosApp', [ngCookies, ngResource, ngSanitize, 'btford.socket-io', uiRouter,
-  uiBootstrap, _Auth, account, admin, navbar, footer, main, constants, socket, util, ngAnimate, ngMaterial	
+  uiBootstrap, _Auth, account, admin, navbar, footer, main, constants, socket, util, ngAnimate, ngMaterial
 ])
   .config(routeConfig)
   .run(function($rootScope, $location, Auth) {
