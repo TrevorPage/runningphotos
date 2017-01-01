@@ -20,5 +20,10 @@ module.exports = {
       || process.env.MONGOHQ_URL
       || process.env.OPENSHIFT_MONGODB_DB_URL + process.env.OPENSHIFT_APP_NAME
       || 'mongodb://localhost/runningphotos'
+
+  // TP: Seed DB even in production for initial proof of concept. There may be a better way.
+  // Seed database on startup
+  seedDB: true
+
   }
 };
