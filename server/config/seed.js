@@ -65,6 +65,8 @@ User.find({}).remove()
 Participant.find({}).remove()
     .then(() => {
 
+
+
         var fakeParticipants = [];
         for (var i = 0; i < 1000; i++) {
             fakeParticipants.push({
